@@ -19,7 +19,7 @@ var queue = {};
  * prevent `ENFILE` errors.
  *
  * ```js
- * fsq('path/to/my/file', function (err, contents) {
+ * readFile('path/to/my/file', function (err, contents) {
  *   if (err) return console.error(err);
  *   console.log(contents);
  * });

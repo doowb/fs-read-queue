@@ -33,7 +33,7 @@ File reading function that will queue up calls to `fs.readFile` for the same fil
 **Example**
 
 ```js
-fsq('path/to/my/file', function (err, contents) {
+readFile('path/to/my/file', function (err, contents) {
   if (err) return console.error(err);
   console.log(contents);
 });
