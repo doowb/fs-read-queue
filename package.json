@@ -1,0 +1,28 @@
+{
+  "name": "fs-read-queue",
+  "description": "Ensure the file system is ready to read a file.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/doowb/fs-read-queue",
+  "author": "Brian Woodward (https://github.com/doowb)",
+  "repository": "doowb/fs-read-queue",
+  "bugs": {
+    "url": "https://github.com/doowb/fs-read-queue/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": []
+}
