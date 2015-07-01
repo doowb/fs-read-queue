@@ -1,6 +1,6 @@
 {
   "name": "fs-read-queue",
-  "description": "Queue `fs.readFile` calls to the same filepath.",
+  "description": "Queue `fs.readFile` calls to the same file path.",
   "version": "0.1.0",
   "homepage": "https://github.com/doowb/fs-read-queue",
   "author": "Brian Woodward (https://github.com/doowb)",

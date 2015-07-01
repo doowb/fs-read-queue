@@ -1,6 +1,6 @@
 # fs-read-queue [![NPM version](https://badge.fury.io/js/fs-read-queue.svg)](http://badge.fury.io/js/fs-read-queue)  [![Build Status](https://travis-ci.org/doowb/fs-read-queue.svg)](https://travis-ci.org/doowb/fs-read-queue)
 
-> Queue `fs.readFile` calls to the same filepath.
+> Queue `fs.readFile` calls to the same file path.
 
 > The code in this module is inspired by the work done by [mhiguera](https://github.com/mhiguera) in [this pull request](https://github.com/tj/consolidate.js/pull/171).
 
