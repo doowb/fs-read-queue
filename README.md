@@ -1,49 +1,65 @@
-# fs-read-queue [![NPM version](https://badge.fury.io/js/fs-read-queue.svg)](http://badge.fury.io/js/fs-read-queue)  [![Build Status](https://travis-ci.org/doowb/fs-read-queue.svg)](https://travis-ci.org/doowb/fs-read-queue) 
+# fs-read-queue [![NPM version](https://badge.fury.io/js/fs-read-queue.svg)](http://badge.fury.io/js/fs-read-queue)  [![Build Status](https://travis-ci.org/doowb/fs-read-queue.svg)](https://travis-ci.org/doowb/fs-read-queue)
 
 > Ensure the file system is ready to read a file.
 
-## Install with [npm](npmjs.org)
+Install with [npm](https://www.npmjs.com/)
 
-```bash
-npm i fs-read-queue --save
+```sh
+$ npm i fs-read-queue --save
 ```
 
 ## Usage
 
 ```js
-var fsReadQueue = require('fs-read-queue');
+var readFile = require('fs-read-queue');
 ```
 
 ## API
+
 <!-- add a path or glob pattern for files with code comments to use for docs  -->
-{%= apidocs("index.js") %}
 
-## Related projects
-<!-- add an array of related projects, then un-escape the helper -->
-{%= related([]) %}  
+### [readFile](index.js#L33)
 
-## Running tests
-Install dev dependencies.
+File reading function that will queue up calls to `fs.readFile` for the same filepath to prevent `ENFILE` errors.
 
-```bash
-npm i -d && npm test
+**Params**
+
+* `fp` **{String}**: File path to read
+* `options` **{String}**: Additional options to pass to `  fs.readFile`
+* `cb` **{Function}**: Callback function that takes `err` and `contents` parameters. Will be called when the file is read.
+
+**Example**
+
+```js
+fsq('path/to/my/file', function (err, contents) {
+  if (err) return console.error(err);
+  console.log(contents);
+});
 ```
 
+## Running tests
+
+Install dev dependencies:
+
+```sh
+$ npm i -d && npm test
+```
 
 ## Contributing
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/doowb/fs-read-queue/issues)
 
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/doowb/fs-read-queue/issues/new)
 
 ## Author
 
 **Brian Woodward**
- 
+
 + [github/doowb](https://github.com/doowb)
-+ [twitter/doowb](http://twitter.com/doowb) 
++ [twitter/doowb](http://twitter.com/doowb)
 
 ## License
+
 Copyright © 2015 Brian Woodward
-Released under the MIT license
+Released under the MIT license.
 
 ***
 

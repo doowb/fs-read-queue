@@ -12,7 +12,25 @@ var fs = require('fs');
 var reading = {};
 var queue = {};
 
-module.exports = function read (fp, options, cb) {
+/**
+ * File reading function that will queue up calls to `fs.readFile` for the same filepath to
+ * prevent `ENFILE` errors.
+ *
+ * ```js
+ * fsq('path/to/my/file', function (err, contents) {
+ *   if (err) return console.error(err);
+ *   console.log(contents);
+ * });
+ * ```
+ *
+ * @param  {String} `fp` File path to read
+ * @param  {String} `options` Additional options to pass to `fs.readFile`
+ * @param  {Function} `cb` Callback function that takes `err` and `contents` parameters. Will be called when the file is read.
+ * @api public
+ * @name  readFile
+ */
+
+module.exports = function readFile (fp, options, cb) {
   if (typeof options === 'function') {
     cb = options;
     options = null;

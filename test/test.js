@@ -3,7 +3,7 @@
 var assert = require('assert');
 var async = require('async');
 var glob = require('globby');
-var read = require('..');
+var readFile = require('..');
 var fs = require('fs');
 
 var max = 1000, i, arr;
@@ -35,7 +35,7 @@ describe('fs-read-queue', function () {
       if (err) return done(err);
       async.each(arr, function (i, next) {
         async.each(files, function (fp, cb) {
-          read(fp, cb);
+          readFile(fp, cb);
         }, next);
       }, done);
     });
