@@ -2,6 +2,8 @@
 
 > Ensure the file system is ready to read a file.
 
+> The code in this module is inspired by the work done by [mhiguera](https://github.com/mhiguera) in [this pull request](https://github.com/tj/consolidate.js/pull/171).
+
 Install with [npm](https://www.npmjs.com/)
 
 ```sh
@@ -18,7 +20,7 @@ var readFile = require('fs-read-queue');
 
 <!-- add a path or glob pattern for files with code comments to use for docs  -->
 
-### [readFile](index.js#L33)
+### [readFile](index.js#L35)
 
 File reading function that will queue up calls to `fs.readFile` for the same filepath to prevent `ENFILE` errors.
 

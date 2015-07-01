@@ -1,6 +1,8 @@
 /*!
  * fs-read-queue <https://github.com/doowb/fs-read-queue>
  *
+ * Inspired by this pull request: https://github.com/tj/consolidate.js/pull/171
+ *
  * Copyright (c) 2015, Brian Woodward.
  * Licensed under the MIT License.
  */
