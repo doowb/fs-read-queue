@@ -1,6 +1,6 @@
 {
   "name": "fs-read-queue",
-  "description": "Ensure the file system is ready to read a file.",
+  "description": "Queue `fs.readFile` calls to the same filepath.",
   "version": "0.1.0",
   "homepage": "https://github.com/doowb/fs-read-queue",
   "author": "Brian Woodward (https://github.com/doowb)",
