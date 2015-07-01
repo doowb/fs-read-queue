@@ -20,6 +20,8 @@
     "test": "mocha"
   },
   "devDependencies": {
+    "async": "^1.3.0",
+    "globby": "^2.1.0",
     "mocha": "*"
   }
 }
